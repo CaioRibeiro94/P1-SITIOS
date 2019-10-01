@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <style>
+        table tr td{
+    border: 1px solid rgb(0, 0, 0);
+}   
+body{
+    background-color: rgb(206, 206, 206)
+}
+label{
+    color: black;
+    font-size: 15px;
+}
+        </style>
+    </head>
+
+
+    <body id="campos">
+            <label>Autores:</label><input type="text" id="nome"><p></p>
+            <label>Email para contato: </label><input type="text" id="email"><p></p>
+            <label>Grau :  </label><input type="text" id="grau"><p></p>
+            <label>Curso :  </label><input type="text" id="curso"><p></p>
+            <label>Orientadores :  </label><input type="text" id="orient"><p></p>
+            <label>Tipo do Trabalho :  </label><input type="text" id="tipo"><p></p>                                                                                                                                                                                                                              
+            <label>Ano :  </label><input type="text" id="year"><p></p>
+            <label>Ilustração : </label><br>
+                    <div class="input-field col s12">
+                    
+                    <input placeholder="Não Sim,colorido ou Preto e Branca" id="ilustracao" type="text" class="validate">
+                  </div>
+          
+                <label>Fonte :  </label><input type="text" id="fonte" placeholder="Arial,etc"><p></p>      
+                <label>Palavra-Chave :  </label><input type="text" id="key"><p></p>      
+                  <button class="waves-effect waves-light btn" onclick="add()">Adicionar</button>
+                  <button class="waves-effect waves-light btn" onclick="lista()">Listar</button>
+                  <button class="waves-effect waves-light btn" onclick="limpar()">Limpar</button>
+        <h2>Lista de Nomes</h2>    
+        <div id="container"></div>
+
+    </body>
+    <script src="Objeto.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+    </script>
+</html>
